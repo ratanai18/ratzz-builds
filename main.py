@@ -90,4 +90,4 @@ def optimize_institutional(req: InstitutionalRequest):
 
     except Exception as err:
         print("Error:", str(err))
-        raise HTTPException(status_status=500, detail=str(err))
+        raise HTTPException(status_code=500, detail=str(err))
