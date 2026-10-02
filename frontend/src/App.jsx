@@ -28,6 +28,8 @@ import {
   Sliders
 } from "lucide-react";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
 
 // =========================================================
 // AESTHETIC COLOR PALETTE
@@ -223,7 +225,7 @@ export default function App() {
 
       const response = await fetch(
 
-        "http://127.0.0.1:8000/optimize/institutional",
+        `${API_URL}/optimize/institutional`,
 
         {
 
@@ -292,7 +294,7 @@ export default function App() {
 
       alert(
 
-        "Failed to connect to backend. Make sure FastAPI is running on port 8000."
+        "Failed to connect to backend. Please check that the backend server is running."
 
       );
 
